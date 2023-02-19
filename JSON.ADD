@@ -1,0 +1,14 @@
+    SUBROUTINE JSON.ADD(BUFFER,KEY,VALUE)
+*
+    IF BUFFER = '' THEN
+        BUFFER = KEY : @VM : VALUE
+    END ELSE
+        BUFFER = BUFFER : @AM : KEY : @VM : VALUE
+    END
+*
+    RETURN
+*
+* END OF PROGRAM
+*
+    END
+*

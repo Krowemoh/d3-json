@@ -1,0 +1,29 @@
+    SUBROUTINE JSON.CREATE.OBJECT(JSON,BUFFER)
+*
+    NUMBER.OF.KEYS = DCOUNT(BUFFER,@AM)
+    JSON = ''
+*
+    FOR I = 1 TO NUMBER.OF.KEYS
+        KEY = TRIM(BUFFER<I,1>)
+        VALUE = TRIM(BUFFER<I,2>)
+*
+        IF VALUE # '' AND (VALUE[1,1] = '[' OR VALUE[1,1] = '{' OR NUM(VALUE)) THEN
+            JSON<-1> = '"' : KEY : '": ' : VALUE
+*
+        END ELSE
+            KEY = CHANGE(KEY,'"','\"')
+            VALUE = CHANGE(VALUE,'"','\"')
+*
+            JSON<-1> = '"' : KEY : '": "' : VALUE : '"'
+        END
+    NEXT I
+*
+    CONVERT @AM TO ',' IN JSON
+    JSON = '{ ' : JSON : ' }'
+*
+    RETURN
+*
+* END OF PROGRAM
+*
+    END
+*
