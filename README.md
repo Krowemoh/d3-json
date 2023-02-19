@@ -2,9 +2,7 @@
 
 This is a very simply set of programs to create json in Rocket's multivalue database D3.
 
-Warning: 
-
-**You cannot use '[' or '{' as the starting character in a value.**
+**Warning: You cannot use '[' or '{' as the starting character in a value.**
 
 ## Installation
 
