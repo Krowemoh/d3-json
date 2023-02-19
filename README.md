@@ -6,9 +6,11 @@ Warning:
 
 **You cannot use '[' or '{' as the starting character in a value.**
 
-https://nivethan.dev/devlog/d3-json-creation.html
+## Installation
 
-https://nivethan.dev/devlog/d3-json-creation---the-how.html
+Download the files, compile them and then catalog them.
+
+## Example
 
 This is the code to create some json. You can create key value pairs, arrays and objects.
 
@@ -126,4 +128,11 @@ This outputs the following:
    }
 }
 ```
+
+## Blog Posts
+
+https://nivethan.dev/devlog/d3-json-creation.html
+
+https://nivethan.dev/devlog/d3-json-creation---the-how.html
+
 
